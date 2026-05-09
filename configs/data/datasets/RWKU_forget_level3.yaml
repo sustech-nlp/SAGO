@@ -1,0 +1,11 @@
+RWKU_forget_level3:
+  handler: RWKUQADataset
+  args:
+    hf_args:
+      path: "json"
+      data_files: "data/rwku/Batch/1-10/forget_level3.json"
+      split: "train"
+    question_key: "query"
+    answer_key: "answer"
+    max_length: 512
+    level: 3

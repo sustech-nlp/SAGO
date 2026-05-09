@@ -1,0 +1,7 @@
+defaults:
+  - GradDiff
+
+handler: SimNPOForget
+method_args:
+  delta: 0.0
+  beta: 4.5

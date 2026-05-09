@@ -1,0 +1,7 @@
+defaults:
+  - SimNPO
+
+handler: SimNPOWithSurgery
+method_args:
+  # Gradient Surgery parameters
+  surgery_strategy: "sago"  # ["sago", "sago_prefer_retain", "pcgrad", "pcgrad_global", "sum"]

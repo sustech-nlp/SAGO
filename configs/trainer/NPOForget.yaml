@@ -1,0 +1,6 @@
+defaults:
+  - GradDiff
+
+handler: NPOForget
+method_args:
+  beta: 0.1

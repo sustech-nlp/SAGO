@@ -1,0 +1,3 @@
+defaults:
+  - datasets@train: WMDP_forget
+  - datasets@eval: null

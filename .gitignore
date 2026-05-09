@@ -1,0 +1,7 @@
+.vscode/
+saves/
+wandb/
+.data/
+dist/
+build/
+*.pyc

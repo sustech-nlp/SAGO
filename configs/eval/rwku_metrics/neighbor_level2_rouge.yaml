@@ -1,0 +1,25 @@
+# @package eval.rwku.metrics.neighbor_level2_rouge
+defaults:
+  - ../../data/datasets@datasets: RWKU_neighbor_level2
+  - ../../generation@generation_args: default
+  - ../../collator@collators: DataCollatorForSupervisedDatasetwithIndex
+  
+handler: rouge
+rouge_type: rougeL_recall
+batch_size: 16
+
+datasets:
+  RWKU_neighbor_level2:
+    args:
+      hf_args:
+        data_files: "data/rwku/${eval.rwku.target}/neighbor_level2.json"
+      predict_with_generate: true
+
+collators:
+  DataCollatorForSupervisedDataset: 
+    args:
+      padding_side: left
+
+generation_args:
+  max_new_tokens: 32
+  stopwords: ["\n\n", "\nQuestion", "Question:"]

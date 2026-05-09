@@ -1,0 +1,17 @@
+# @package _global_
+
+defaults:
+  - override /model: Llama-3-8B-Instruct
+  - override /eval: rwku
+
+target: "Batch/1-10"
+
+model:
+  model_args:
+    pretrained_model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
+
+eval:
+  rwku:
+    target: ${target}
+  
+task_name: ???

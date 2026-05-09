@@ -1,0 +1,19 @@
+# @package _global_
+
+defaults:
+  - /experiment/unlearn/wmdp/NPO_sago_cyber
+
+data_split: cyber
+
+trainer:
+  args:
+    learning_rate: 1e-5
+    max_steps: 100
+  
+  method_args:
+    beta: 0.005
+    alpha: 0.1
+    gamma: 1.0
+    surgery_strategy: "pcgrad"
+
+task_name: ???

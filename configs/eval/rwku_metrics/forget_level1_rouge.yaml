@@ -1,0 +1,25 @@
+# @package eval.rwku.metrics.forget_level1_rouge
+defaults:
+  - ../../data/datasets@datasets: RWKU_forget_level1
+  - ../../generation@generation_args: default
+  - ../../collator@collators: DataCollatorForSupervisedDatasetwithIndex
+  
+handler: rouge
+rouge_type: rougeL_recall
+batch_size: 16
+
+datasets:
+  RWKU_forget_level1:
+    args:
+      hf_args:
+        data_files: data/rwku/${eval.rwku.target}/forget_level1.json
+      predict_with_generate: true
+
+collators:
+  DataCollatorForSupervisedDataset: 
+    args:
+      padding_side: left
+
+generation_args:
+  max_new_tokens: 32
+  stopwords: ["\n\n", "\nQuestion", "Question:"]

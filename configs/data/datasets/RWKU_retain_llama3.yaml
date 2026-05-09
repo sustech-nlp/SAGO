@@ -1,0 +1,9 @@
+RWKU_retain_llama3:
+  handler: PretrainingDataset
+  args:
+    hf_args:
+      path: "json"
+      data_files: "data/rwku/Batch/1-10/negative_llama3.json"
+      split: "train"
+    text_key: "text"
+    max_length: 512

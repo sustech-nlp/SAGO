@@ -1,0 +1,17 @@
+# @package _global_
+
+defaults:
+  - /experiment/unlearn/wmdp/default
+
+data_split: bio
+
+trainer:
+  args:
+    learning_rate: 1e-5
+    max_steps: 100
+  
+  method_args:
+    surgery_strategy: "pcgrad"
+
+
+task_name: ???
